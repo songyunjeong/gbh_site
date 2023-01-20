@@ -1,0 +1,41 @@
+* {margin: 0; padding: 0;}
+body {
+  font-family: 'Lato', 'Noto Sans KR', Arial, Helvetica, sans-serif ;
+}
+li {list-style: none;}
+a {color: black}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Noto+Sans&family=Noto+Sans+KR&display=swap');
+
+
+header {
+  height: 70px;
+  background-color: #fff;
+  text-align: center;
+  opacity: 0.7;
+  position: sticky;
+  top: 0;
+}
+
+.bold {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+  font-size: 12px;
+  padding: 25px 200px;
+}
+footer li {
+  margin-bottom: 10px;
+}
+footer .footer1 {
+  padding-left: 30px;
+}
+footer .footer4 {
+  padding: 0 110px;
+}
