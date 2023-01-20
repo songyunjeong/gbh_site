@@ -10,7 +10,11 @@ function App() {
   return (
     <div className="App">
       <header>
-        <div className="logo"><Link to='/'><img src={process.env.PUBLIC_URL + '/images/header/logo.jpg'} alt="" style={{height: '70px'}} /></Link></div>
+        <div className="logo">
+          <Link to='/'>
+            <img src={process.env.PUBLIC_URL + '/images/header/logo.jpg'} alt="" style={{height: '70px'}} />
+          </Link>
+        </div>
       </header>
 
       <Routes>
