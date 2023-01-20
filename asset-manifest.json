@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/songyunjeong/gbh_site/static/css/main.e90d2702.css",
-    "main.js": "/songyunjeong/gbh_site/static/js/main.a285df3e.js",
-    "static/js/787.2e1cf62b.chunk.js": "/songyunjeong/gbh_site/static/js/787.2e1cf62b.chunk.js",
-    "index.html": "/songyunjeong/gbh_site/index.html",
-    "main.e90d2702.css.map": "/songyunjeong/gbh_site/static/css/main.e90d2702.css.map",
-    "main.a285df3e.js.map": "/songyunjeong/gbh_site/static/js/main.a285df3e.js.map",
-    "787.2e1cf62b.chunk.js.map": "/songyunjeong/gbh_site/static/js/787.2e1cf62b.chunk.js.map"
+    "main.css": "/gbh_site/static/css/main.e90d2702.css",
+    "main.js": "/gbh_site/static/js/main.8ba6b5da.js",
+    "static/js/787.2e1cf62b.chunk.js": "/gbh_site/static/js/787.2e1cf62b.chunk.js",
+    "index.html": "/gbh_site/index.html",
+    "main.e90d2702.css.map": "/gbh_site/static/css/main.e90d2702.css.map",
+    "main.8ba6b5da.js.map": "/gbh_site/static/js/main.8ba6b5da.js.map",
+    "787.2e1cf62b.chunk.js.map": "/gbh_site/static/js/787.2e1cf62b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e90d2702.css",
-    "static/js/main.a285df3e.js"
+    "static/js/main.8ba6b5da.js"
   ]
 }
