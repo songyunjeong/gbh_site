@@ -16,6 +16,15 @@ header {
   opacity: 0.7;
   position: sticky;
   top: 0;
+  z-index: 90;
+}
+header .header_box {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 200px; box-sizing: border-box;
+}
+header .header_box img {
+  height: 70px;
 }
 
 .bold {

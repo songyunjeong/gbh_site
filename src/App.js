@@ -10,15 +10,23 @@ function App() {
   return (
     <div className="App">
       <header>
-        <div className="logo">
-          <Link to='/'>
-            <img src={process.env.PUBLIC_URL + '/images/header/logo.jpg'} alt="" style={{height: '70px'}} />
-          </Link>
+        <div className="header_box">
+          <div className="ham">
+            <img src={process.env.PUBLIC_URL + '/images/header/ham.jpg'} alt="" />
+          </div>
+          <div className="logo">
+            <Link to='/'>
+              <img src={process.env.PUBLIC_URL + '/images/header/logo.jpg'} alt="" />
+            </Link>
+          </div>
+          <div className="cart">
+            <img src={process.env.PUBLIC_URL + '/images/header/cart.jpg'} alt="" />
+          </div>
         </div>
       </header>
 
       <Routes>
-        <Route path='' element={<Main />} />
+        <Route path='/*' element={<Main />} />
         <Route path='about' element={<About />} />
         <Route path='home' element={<Home />} />
         <Route path='cosmetic' element={<Cosmetic />} />

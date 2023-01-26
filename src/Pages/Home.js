@@ -1,5 +1,5 @@
-import homes from './homeData';
 import './shop.css';
+import homes from './homeData';
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
                 <p className='product_name'>{product.item}</p>
                 <p className='product_price'>{product.price}원</p>
               </div>
-            </div>
+            </div> 
           )
         })
       }
