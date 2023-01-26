@@ -28,9 +28,9 @@ function App() {
       <Routes>
         <Route path='/*' element={<Main />} />
         <Route path='about' element={<About />} />
-        <Route path='home' element={<Home />} />
-        <Route path='cosmetic' element={<Cosmetic />} />
-        <Route path='apparel' element={<Apparel />} />
+        <Route path='home/*' element={<Home />} />
+        <Route path='cosmetic/*' element={<Cosmetic />} />
+        <Route path='apparel/*' element={<Apparel />} />
       </Routes>
 
       <footer>

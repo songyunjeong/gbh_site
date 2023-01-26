@@ -1,0 +1,12 @@
+* {margin: 0; padding: 0;}
+
+.page_detail {
+  display: flex;
+  justify-content: space-between;
+  width: 990px;
+  margin: 50px auto 100px;
+}
+
+.page_detail .product_txt {
+  width: 400px;
+}
