@@ -1,5 +1,6 @@
 import './App.css';
 import { Routes, Route, Link } from 'react-router-dom';
+import { useState } from 'react';
 import Main from './Pages/Main';
 import About from './Pages/About';
 import Home from './Pages/Home';
@@ -7,11 +8,20 @@ import Cosmetic from './Pages/Cosmetic';
 import Apparel from './Pages/Apparel';
 
 function App() {
+  const [ham, setHam] = useState(false)
+  const [popup, setPopup] = useState(true)
+
   return (
     <div className="App">
+      {
+        popup === true
+        ? <Popup setPopup={setPopup} />
+        : null
+      }
+
       <header>
         <div className="header_box">
-          <div className="ham">
+          <div className="ham" onClick={() => {setHam(true)}}>
             <img src={process.env.PUBLIC_URL + '/images/header/ham.jpg'} alt="" />
           </div>
           <div className="logo">
@@ -24,6 +34,11 @@ function App() {
           </div>
         </div>
       </header>
+      {
+        ham === true
+        ? <Ham setHam={setHam} />
+        : null
+      }
 
       <Routes>
         <Route path='/*' element={<Main />} />
@@ -77,3 +92,36 @@ function App() {
 }
 
 export default App;
+
+
+function Ham(props) {
+  const {setHam} = props
+
+  return (
+    <div className='ham_btn'>
+      <div className="ham_cancle" onClick={() => setHam(false)}><img src={process.env.PUBLIC_URL + '/images/header/cancle.jpg'} alt="" /></div>
+      <ul className="ham_lnb">
+        <li><Link to='about'>About</Link></li>
+        <li><Link to='home'>Home design</Link></li>
+        <li><Link to='cosmetic'>Cosmetic</Link></li>
+        <li><Link to='apparel'>Apparel</Link></li>
+      </ul>
+    </div>
+  )
+}
+
+function Popup(props) {
+  const {setPopup} = props
+
+  return (
+    <div className='popup'>
+      <div className="img">
+        <img src={process.env.PUBLIC_URL + '/images/popup/nrCeramics.jpg'} alt="" />
+      </div>
+      <div className="btn">
+        <div className="cancle1">오늘 하루 열지 않기</div>
+        <div className="cancle2" onClick={() => {setPopup(false)}}>닫기</div>
+      </div>
+    </div>
+  )
+}

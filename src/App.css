@@ -9,6 +9,7 @@ a {color: black}
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Noto+Sans&family=Noto+Sans+KR&display=swap');
 
 
+/* header */
 header {
   height: 70px;
   background-color: #fff;
@@ -21,23 +22,22 @@ header {
 header .header_box {
   display: flex;
   justify-content: space-between;
-  padding: 0 200px; box-sizing: border-box;
 }
 header .header_box img {
   height: 70px;
 }
 
-.bold {
-  font-size: 14px;
-  font-weight: 600;
-}
-
+/* footer */
 footer {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #ccc;
   font-size: 12px;
   padding: 25px 200px;
+}
+footer .bold {
+  font-size: 14px;
+  font-weight: 600;
 }
 footer li {
   margin-bottom: 10px;
@@ -47,4 +47,60 @@ footer .footer1 {
 }
 footer .footer4 {
   padding: 0 110px;
+}
+
+/* ham */
+header .header_box .ham img:hover {
+  cursor: pointer;
+}
+.ham_btn {
+  width: 250px; height: 100%;
+  background-color: #fff;
+  border-right: 1px solid #eee;
+  position: fixed;
+  top: 0; left: 0;
+  z-index: 100;
+}
+.ham_btn .ham_cancle img {
+  height: 70px;
+}
+.ham_btn .ham_cancle img:hover {
+  cursor: pointer;
+}
+.ham_btn .ham_lnb {
+  margin-top: 50px;
+  padding-left: 30px; box-sizing: border-box;
+}
+.ham_btn .ham_lnb li {
+  margin-bottom: 10px;
+}
+
+/* popup */
+.popup {
+  width: 390px; height: 470px;
+  background-color: #fff;
+  border: 1px solid #ccc; box-sizing: border-box;
+  position: fixed;
+  top: 0; left: 10px;
+  z-index: 110;
+}
+.popup .img img {
+  display: block;
+  width: 100%;
+}
+.popup .btn {
+  display: flex;
+  border-top: 1px solid #ccc; box-sizing: border-box;
+}
+.popup .btn > div {
+  width: 50%; height: 50px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 50px;
+}
+.popup .btn > div:hover {
+  cursor: pointer;
+}
+.popup .btn .cancle1 {
+  border-right: 1px solid #ccc; box-sizing: border-box;
 }

@@ -14,6 +14,7 @@ export default function Details(props) {
         <p className='product_name'>{products[id].item}</p>
         <p className='product_name'>{products[id].color}</p>
         <p className='product_price'>{products[id].price}원</p>
+        <p className='product_details'>{products[id].details}</p>
       </div>
     </section>
   )
