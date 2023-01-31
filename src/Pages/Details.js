@@ -1,4 +1,5 @@
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import { useState } from 'react';
 import { useDispatch } from "react-redux";
 import { addItem } from "./store";
 import './detail.css';
@@ -7,6 +8,7 @@ export default function Details(props) {
   const {products} = props
   const {id} = useParams()
   const dispatch = useDispatch()
+  const [cartPopup, setCartPopup] = useState(false)
 
   return (
     <section className="page_detail">
@@ -19,6 +21,7 @@ export default function Details(props) {
         <p className='product_price'>{products[id].price}원</p>
         <p className='product_details'>{products[id].details}</p>
         <button onClick={() => {
+          setCartPopup(true)
           dispatch(addItem({
             id: products[id].id,
             image: products[id].image,
@@ -27,17 +30,26 @@ export default function Details(props) {
             count: 1
           }))
         }} className="cart_btn">CART</button>
+        
+        {
+          cartPopup === true
+          ? <CartPopup setCartPopup={setCartPopup} />
+          : null
+        }
       </div>
     </section>
   )
 }
 
-function cartPopup() {
+function CartPopup(props) {
+  const {setCartPopup} = props
+  const navigate = useNavigate()
+
   return (
     <div className="cart_popup">
-      <p>장바구니에 담았습니다. 장바구니로 이동할까요?</p>
-      <button>좀 더 볼게요.</button>
-      <button>OK.</button>
+      <p>장바구니에 담았습니다.</p>
+      <button className="no" onClick={() => setCartPopup(false)}>계속 쇼핑하기</button>
+      <button className="yes" onClick={() => {navigate('/cart')}}>장바구니 전체보기</button>
     </div>
   )
 }

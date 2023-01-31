@@ -2,10 +2,12 @@ import './cart.css';
 import Table from 'react-bootstrap/Table';
 import { useDispatch, useSelector } from "react-redux";
 import { addCount, subCount, deleteItem } from './store';
+import { useNavigate } from 'react-router-dom';
 
 export default function Cart() {
   const state = useSelector((state) => {return state})
   const dispatch = useDispatch()
+  const navigate = useNavigate()
 
   return (
     <section className="page_cart">
@@ -27,13 +29,15 @@ export default function Cart() {
               return (
                 <tr key={i}>
                   <td className='item_img'><img src={state.cart[i].image} alt="" /></td>
-                  <td className='item_item'>{state.cart[i].item}</td>
+                  <td className='item_item' onClick={() => {
+                    navigate('/detail')
+                  }}>{state.cart[i].item}</td>
                   <td className='item_count'>
                     <p>{state.cart[i].count}</p>
-                    <button className='plus' onClick={() => {dispatch(addCount(state.cart[i].id))}}>+</button>
                     <button className='minus' onClick={() => {dispatch(subCount(state.cart[i].id))}}>-</button>
+                    <button className='plus' onClick={() => {dispatch(addCount(state.cart[i].id))}}>+</button>                    
                   </td>
-                  <td className='item_price'>{state.cart[i].price * state.cart[i].count}</td>
+                  <td className='item_price'>{state.cart[i].price * state.cart[i].count} 원</td>
                   <td className='item_cancle'>
                     <button className='cancle' onClick={() => {dispatch(deleteItem(state.cart[i].id))}}>삭제</button>
                   </td>
@@ -53,9 +57,9 @@ export default function Cart() {
         </thead>
         <tbody>
           <tr>
-            <td></td>
-            <td>3000</td>
-            <td></td>
+            <td>0 원</td>
+            <td>3000 원</td>
+            <td>{+ 3000} 원</td>
           </tr>
         </tbody>
       </Table>

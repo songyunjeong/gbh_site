@@ -29,7 +29,7 @@
   width: 30px; height: 30px;
   border: 1px solid #ccc;
 }
-.page_cart Table tbody td button.plus {
+.page_cart Table tbody td button.minus {
   margin-right: 5px;
 }
 .page_cart Table tbody td button.cancle {

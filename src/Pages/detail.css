@@ -30,3 +30,22 @@
   color: #fff;
   transition: all 0.5s;
 }
+
+.page_detail .cart_popup {
+  width: 300px; height: 180px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 50px;
+  position: fixed;
+  top: calc(50vh - 90px); left: calc(50vw - 150px);
+}
+.page_detail .cart_popup button {
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  padding: 5px 10px;
+}
+.page_detail .cart_popup .no {
+  margin-right: 10px;
+}
