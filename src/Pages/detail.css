@@ -17,3 +17,16 @@
   white-space: pre-wrap;
   margin-top: 50px;
 }
+
+.page_detail .cart_btn {
+  width: 150px; height: 40px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  margin-top: 100px;
+  overflow: hidden;
+}
+.page_detail .cart_btn:hover {
+  background-color: black;
+  color: #fff;
+  transition: all 0.5s;
+}

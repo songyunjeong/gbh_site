@@ -16,7 +16,7 @@ const homes = [
   {
     id: 'home-003',
     image: process.env.PUBLIC_URL + '/images/home/mdfTableMatKineticYellow.jpg',
-    item: 'XNR CERAMICS DESSERT PLATE WHITE',
+    item: 'MDF TABLE MAT KINETIC YELLOW',
     price: 58000,
     details: '심플한 디자인과 최소한의 디테일로 만들어진 테이블매트 입니다. 음식이 돋보이는 플레이팅이 가능하며 음식물로 인한 테이블 변색현상을 방지할 수 있습니다. E0 등급의 고밀도 MDF(High Density Fivrevoard)와 HPL(High Pressure Laminate)를 프레스 가공하여 제작한 제품으로 HPL은 내구성이 강하고 패턴이 다양해 식탁, 스툴과 같은 가구와 인테리어 내장재 등에 다양하게 사용되고 있는 소재입니다.'
   },

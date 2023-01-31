@@ -6,6 +6,8 @@ import About from './Pages/About';
 import Home from './Pages/Home';
 import Cosmetic from './Pages/Cosmetic';
 import Apparel from './Pages/Apparel';
+import Cart from './Pages/Cart';
+import Mypage from './Pages/Mypage';
 
 function App() {
   const [ham, setHam] = useState(false)
@@ -30,7 +32,9 @@ function App() {
             </Link>
           </div>
           <div className="cart">
-            <img src={process.env.PUBLIC_URL + '/images/header/cart.jpg'} alt="" />
+            <Link to='cart'>
+              <img src={process.env.PUBLIC_URL + '/images/header/cart.jpg'} alt="" />
+            </Link>
           </div>
         </div>
       </header>
@@ -46,6 +50,8 @@ function App() {
         <Route path='home/*' element={<Home />} />
         <Route path='cosmetic/*' element={<Cosmetic />} />
         <Route path='apparel/*' element={<Apparel />} />
+        <Route path='cart' element={<Cart />} />
+        <Route path='mypage' element={<Mypage />} />
       </Routes>
 
       <footer>
@@ -105,6 +111,8 @@ function Ham(props) {
         <li><Link to='home'>Home design</Link></li>
         <li><Link to='cosmetic'>Cosmetic</Link></li>
         <li><Link to='apparel'>Apparel</Link></li>
+        <li className='login'><Link to=''>Login</Link></li>
+        <li><Link to='mypage'>My page</Link></li>
       </ul>
     </div>
   )
@@ -118,7 +126,7 @@ function Popup(props) {
       <div className="img">
         <img src={process.env.PUBLIC_URL + '/images/popup/nrCeramics.jpg'} alt="" />
       </div>
-      <div className="btn">
+      <div className="cancle_btn">
         <div className="cancle1">오늘 하루 열지 않기</div>
         <div className="cancle2" onClick={() => {setPopup(false)}}>닫기</div>
       </div>

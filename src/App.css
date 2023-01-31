@@ -3,7 +3,7 @@ body {
   font-family: 'Lato', 'Noto Sans KR', Arial, Helvetica, sans-serif ;
 }
 li {list-style: none;}
-a {color: black}
+a {color: black; text-decoration: none;}
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Noto+Sans&family=Noto+Sans+KR&display=swap');
@@ -33,7 +33,7 @@ footer {
   justify-content: space-between;
   border-top: 1px solid #ccc;
   font-size: 12px;
-  padding: 25px 200px;
+  padding: 25px 50px;
 }
 footer .bold {
   font-size: 14px;
@@ -74,6 +74,9 @@ header .header_box .ham img:hover {
 .ham_btn .ham_lnb li {
   margin-bottom: 10px;
 }
+.ham_btn .ham_lnb li.login {
+  margin-top: 50px;
+}
 
 /* popup */
 .popup {
@@ -88,19 +91,20 @@ header .header_box .ham img:hover {
   display: block;
   width: 100%;
 }
-.popup .btn {
+.popup .cancle_btn {
   display: flex;
   border-top: 1px solid #ccc; box-sizing: border-box;
+  margin: 0; padding: 0;
 }
-.popup .btn > div {
+.popup .cancle_btn > div {
   width: 50%; height: 50px;
   font-size: 14px;
   text-align: center;
   line-height: 50px;
 }
-.popup .btn > div:hover {
+.popup .cancle_btn > div:hover {
   cursor: pointer;
 }
-.popup .btn .cancle1 {
+.popup .cancle_btn .cancle1 {
   border-right: 1px solid #ccc; box-sizing: border-box;
 }
