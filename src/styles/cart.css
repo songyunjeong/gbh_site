@@ -1,0 +1,35 @@
+Table {
+  margin-top: 50px;
+}
+Table:first-child tbody td {
+  height: 115px;
+}
+Table tbody td.item_img img {
+  width: 100px;
+}
+Table tbody td.item_item {
+  line-height: 115px;
+}
+Table tbody td.item_count {
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+Table tbody td.item_price {
+  line-height: 115px;
+}
+Table tbody td.item_cancle {
+  padding-top: 50px;
+  box-sizing: border-box;
+}
+Table tbody td button {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+}
+Table tbody td button.minus {
+  margin-right: 5px;
+}
+Table tbody td button.cancle {
+  width: 50px;
+  font-size: 12px;
+}
