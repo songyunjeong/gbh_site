@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/gbh_site/static/css/main.8677c5c0.css",
-    "main.js": "/gbh_site/static/js/main.23b51729.js",
-    "static/js/787.2e1cf62b.chunk.js": "/gbh_site/static/js/787.2e1cf62b.chunk.js",
+    "main.css": "/gbh_site/static/css/main.a826db67.css",
+    "main.js": "/gbh_site/static/js/main.21256e49.js",
     "index.html": "/gbh_site/index.html",
-    "main.8677c5c0.css.map": "/gbh_site/static/css/main.8677c5c0.css.map",
-    "main.23b51729.js.map": "/gbh_site/static/js/main.23b51729.js.map",
-    "787.2e1cf62b.chunk.js.map": "/gbh_site/static/js/787.2e1cf62b.chunk.js.map"
+    "main.a826db67.css.map": "/gbh_site/static/css/main.a826db67.css.map",
+    "main.21256e49.js.map": "/gbh_site/static/js/main.21256e49.js.map"
   },
   "entrypoints": [
-    "static/css/main.8677c5c0.css",
-    "static/js/main.23b51729.js"
+    "static/css/main.a826db67.css",
+    "static/js/main.21256e49.js"
   ]
 }
