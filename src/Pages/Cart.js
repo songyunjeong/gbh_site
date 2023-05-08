@@ -1,9 +1,10 @@
 import "../styles/cart.css";
 import Table from "react-bootstrap/Table";
 import { useDispatch, useSelector } from "react-redux";
-import { addCount, subCount, deleteItem } from "../store";
+import { addCount, subCount, deleteItem, addItem } from "../store";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { useEffect, useState } from "react";
 
 const PageCart = styled.div`
   width: 1200px;
@@ -12,11 +13,26 @@ const PageCart = styled.div`
 `;
 
 export default function Cart() {
+  const [totalPrice, setTotalPrice] = useState(0);
+  const price = [];
+  const [deliveryCost, setDeliveryCost] = useState(0);
   const state = useSelector((state) => {
     return state;
   });
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    for (let i = 0; i < state.cart.length; i++) {
+      const itemPrice = state.cart[i].price * state.cart[i].count;
+      price.push(itemPrice);
+      setTotalPrice(price.reduce((x, y) => x + y));
+    }
+  }, onclick);
+
+  useEffect(() => {
+    setDeliveryCost(totalPrice && totalPrice < 30000 ? 3000 : 0);
+  }, onclick);
 
   return (
     <PageCart>
@@ -33,7 +49,7 @@ export default function Cart() {
           </tr>
         </thead>
         <tbody>
-          {state.cart.map((item, i) => {
+          {state.cart.map((_, i) => {
             return (
               <tr key={i}>
                 <td className="item_img">
@@ -75,6 +91,9 @@ export default function Cart() {
                     className="cancle"
                     onClick={() => {
                       dispatch(deleteItem(state.cart[i].id));
+                      if (state.cart[0]) {
+                        setTotalPrice(0);
+                      }
                     }}
                   >
                     삭제
@@ -94,26 +113,16 @@ export default function Cart() {
           </tr>
         </thead>
         <tbody>
-          {state.cart.map((item, i) => {
-            return (
-              <tr>
-                <td key={i}>
-                  {(state.cart[i].price * state.cart[i].count).toLocaleString()}{" "}
-                  원
-                </td>
-                <td>3,000 원</td>
-                <td>
-                  {(
-                    state.cart[i].price * state.cart[i].count +
-                    3000
-                  ).toLocaleString()}{" "}
-                  원
-                </td>
-              </tr>
-            );
-          })}
+          <tr>
+            <td>{totalPrice.toLocaleString()} 원</td>
+            <td>{deliveryCost.toLocaleString()} 원</td>
+            <td>{(totalPrice + deliveryCost).toLocaleString()} 원</td>
+          </tr>
         </tbody>
       </Table>
+      <p style={{ textAlign: "right", fontSize: "12px" }}>
+        * 30,000 원 이상 구매시 무료배송 됩니다.
+      </p>
     </PageCart>
   );
 }

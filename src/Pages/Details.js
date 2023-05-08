@@ -1,8 +1,8 @@
-import { useNavigate, useParams } from 'react-router-dom';
-import { useState } from 'react';
-import { useDispatch } from 'react-redux';
-import { addItem } from '../store';
-import styled from 'styled-components';
+import { useNavigate, useParams } from "react-router-dom";
+import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addItem } from "../store";
+import styled from "styled-components";
 
 const PageDetail = styled.div`
   display: flex;
@@ -63,7 +63,7 @@ export default function Details(props) {
   return (
     <PageDetail>
       <div>
-        <img src={products[id].image} alt='' />
+        <img src={products[id].image} alt="" />
       </div>
       <ProductTxt>
         <p>{products[id].item}</p>
@@ -101,15 +101,15 @@ function CartPopup(props) {
     <Popup>
       <p>장바구니에 담았습니다.</p>
       <PopupBtn
-        style={{ marginRight: '10px' }}
+        style={{ marginRight: "10px" }}
         onClick={() => setCartPopup(false)}
       >
         계속 쇼핑하기
       </PopupBtn>
       <PopupBtn
-        className='yes'
+        className="yes"
         onClick={() => {
-          navigate('/cart');
+          navigate("/cart");
         }}
       >
         장바구니 전체보기
