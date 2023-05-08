@@ -4,7 +4,7 @@ const user = createSlice({
   name: "user",
   initialState: {
     name: "송윤정",
-    memberYear: 2,
+    memberYear: 1,
     gender: "Female",
     age: "28세",
   },
